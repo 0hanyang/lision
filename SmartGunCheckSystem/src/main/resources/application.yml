@@ -1,0 +1,71 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api # Base path for all APIs
+
+spring:
+  application:
+    name: SmartGunCheckSystem
+
+  # Database Configuration (to be filled later)
+  datasource:
+    url: jdbc:mysql://localhost:3306/smart_gun_check_system?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: your_password # CHANGE THIS
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource # Specify HikariCP
+    hikari:
+      connection-timeout: 30000
+      minimum-idle: 10
+      maximum-pool-size: 20
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      # Other HikariCP specific settings can be added here
+
+  # MyBatis Plus Configuration (to be filled/enhanced later)
+  mybatis-plus:
+    mapper-locations: classpath*:/mapper/**/*.xml # If using XML mappers
+    global-config:
+      db-config:
+        id-type: auto # Auto-increment IDs
+
+# JWT Configuration (to be filled later)
+jwt:
+  secret: YourSuperSecretKeyForJWTGenerationWhichIsLongAndSecure # CHANGE THIS
+  expiration-ms: 86400000 # 24 hours
+  header: Authorization
+  prefix: "Bearer "
+
+# Springdoc OpenAPI (Swagger) Configuration
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    display-request-duration: true
+    groups-order: DESC
+    operations-sorter: alpha
+    tags-sorter: alpha
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+
+
+# Logging (example: set log level for the application)
+logging:
+  level:
+    com.lingxun.smartgunchecksystem: DEBUG
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    # com.baomidou.mybatisplus: DEBUG # Uncomment to see MyBatis Plus SQL logs
+
+# OSS Configuration (placeholders, to be filled if OSS is chosen for image uploads)
+file-upload:
+  storage-type: local # or oss
+  local:
+    base-path: /data/images # Base path for local image storage
+  oss:
+    endpoint:
+    access-key-id:
+    access-key-secret:
+    bucket-name:
+    # region: (optional)
