@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------
+Test set: com.example.biobanksystem.service.RefrigeratorServiceTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 1.806 s <<< FAILURE! -- in com.example.biobanksystem.service.RefrigeratorServiceTest
+com.example.biobanksystem.service.RefrigeratorServiceTest.addFreezerLayer_refrigeratorNotFound_shouldThrowException -- Time elapsed: 1.660 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Refrigerator with id 2 not found.> but was: <Invalid FreezerLayer code format: L1>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.example.biobanksystem.service.RefrigeratorServiceTest.addFreezerLayer_refrigeratorNotFound_shouldThrowException(RefrigeratorServiceTest.java:163)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.example.biobanksystem.service.RefrigeratorServiceTest.addFreezerLayer_invalidCode_shouldThrowException -- Time elapsed: 0.034 s <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException:
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.example.biobanksystem.service.RefrigeratorServiceTest.addFreezerLayer_invalidCode_shouldThrowException(RefrigeratorServiceTest.java:144)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+	at org.mockito.junit.jupiter.MockitoExtension.lambda$afterEach$2(MockitoExtension.java:200)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:198)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
