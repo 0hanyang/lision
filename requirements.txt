@@ -1,0 +1,6 @@
+Flask
+Flask-SQLAlchemy
+Flask-Migrate
+marshmallow
+psycopg2-binary  # Or mysqlclient, depending on DB choice later
+python-dotenv   # For managing environment variables

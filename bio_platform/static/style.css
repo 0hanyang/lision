@@ -1,0 +1,22 @@
+body { font-family: sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+nav { background-color: #333; padding: 10px 0; text-align: center; }
+nav a { margin-right: 15px; color: white; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+hr { border: 0; height: 1px; background: #ddd; margin-bottom: 20px; }
+.content { background-color: white; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+table { border-collapse: collapse; margin-top: 20px; width: 100%; }
+th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+th { background-color: #007bff; color: white; }
+form { margin-bottom: 20px; padding: 15px; border: 1px solid #eee; background-color: #f9f9f9; border-radius: 5px;}
+label { display: inline-block; margin-bottom: 5px; font-weight: bold; }
+input[type="text"], input[type="number"], input[type="date"], input[type="checkbox"] {
+    width: calc(100% - 16px); padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;
+}
+input[type="checkbox"] { width: auto; margin-right: 5px; vertical-align: middle;}
+button { padding: 10px 15px; background-color: #28a745; color: white; border: none; cursor: pointer; border-radius: 4px; }
+button:hover { background-color: #218838; }
+#donorResponse, #specimenResponse, #storageResponse { margin-top: 10px; padding: 10px; border-radius: 4px; }
+.success { background-color: #d4edda; border: 1px solid #c3e6cb; color: #155724; }
+.error { background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; }
+h1, h2 { color: #333; }
+small { display: block; margin-top: -5px; margin-bottom: 10px; font-size: 0.9em; color: #555; }

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Manage Donors{% endblock %}
+{% block content %}
+<h1>Manage Donors</h1>
+<h2>Add New Donor</h2>
+<form id="addDonorForm">
+    <label for="public_id">Public ID (optional, auto-generated if blank):</label><br>
+    <input type="text" id="public_id" name="public_id"><br>
+    <label for="age_range">Age Range:</label><br>
+    <input type="text" id="age_range" name="age_range"><br>
+    <label for="sex">Sex:</label><br>
+    <input type="text" id="sex" name="sex"><br>
+    <label for="consent_status">Consent Given:</label><br>
+    <input type="checkbox" id="consent_status" name="consent_status" value="true"><br><br>
+    <button type="submit">Add Donor</button>
+</form>
+<div id="donorResponse" style="margin-top:10px; padding:10px;"></div>
+
+<h2>Existing Donors</h2>
+<button id="loadDonorsBtn">Load Donors</button>
+<table id="donorsTable" border="1" style="width:100%; margin-top:10px;">
+    <thead>
+        <tr>
+            <th>Public ID</th>
+            <th>Age Range</th>
+            <th>Sex</th>
+            <th>Consent</th>
+            <th>Created At</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+{% endblock %}

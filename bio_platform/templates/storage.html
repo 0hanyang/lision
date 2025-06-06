@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Manage Storage Locations{% endblock %}
+{% block content %}
+<h1>Manage Storage Locations</h1>
+<h2>Add New Storage Location</h2>
+<form id="addStorageForm">
+    <label for="storage_name">Name*:</label><br>
+    <input type="text" id="storage_name" name="name" required><br>
+    <label for="storage_type">Type:</label><br>
+    <input type="text" id="storage_type" name="type"><br>
+    <label for="storage_temperature">Temperature:</label><br>
+    <input type="text" id="storage_temperature" name="temperature"><br>
+    <button type="submit">Add Storage Location</button>
+</form>
+<div id="storageResponse" style="margin-top:10px; padding:10px;"></div>
+
+<h2>Existing Storage Locations</h2>
+<button id="loadStorageBtn">Load Storage Locations</button>
+<table id="storageTable" border="1" style="width:100%; margin-top:10px;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Temperature</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+{% endblock %}

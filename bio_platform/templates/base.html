@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Biospecimen Platform{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('view_bp.index') }}">Home</a> |
+        <a href="{{ url_for('view_bp.manage_donors') }}">Manage Donors</a> |
+        <a href="{{ url_for('view_bp.manage_specimens') }}">Manage Specimens</a> |
+        <a href="{{ url_for('view_bp.manage_storage') }}">Manage Storage</a>
+    </nav>
+    <hr>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
