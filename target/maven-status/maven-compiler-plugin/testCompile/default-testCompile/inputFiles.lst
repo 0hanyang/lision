@@ -1,0 +1,3 @@
+/app/src/test/java/com/example/biobanksystem/BiobankSystemApplicationTests.java
+/app/src/test/java/com/example/biobanksystem/service/ContainerCodeServiceImplTest.java
+/app/src/test/java/com/example/biobanksystem/service/RefrigeratorServiceTest.java
